@@ -227,26 +227,26 @@
     </div>
     <script>
 
-        // 4 cái dưới đặt tên hàm để js dò tới từng class trong HTML 
+         
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
-        // Hàm bật modal
+        
         function showBuyTickets() {
             modal.classList.add('open')
         }
-        // Hàm tắt modal
+        
         function offBuyTickets() {
             modal.classList.remove('open')
         }
-        // Dùng querySelectorAll thì phải dùng lập For và nghe hành vi click chuột
+        
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
-        // Không dùng querySelectorAll thì code trực tiếp và nghe hành vi click chuột
+       
         modalClose.addEventListener('click', offBuyTickets)
-        //  Click vào khoảng không cũng tắt
+        
         modal.addEventListener('click', offBuyTickets)
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
@@ -255,10 +255,10 @@
     </script>
 
     <script>
-        // đỏng mở menu
+        
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('mobile-menu');
-        var headerHeight = header.clientHeight; // Lưu biến chiều cao vàp để dễ thay đổi
+        var headerHeight = header.clientHeight; 
         mobileMenu.onclick = function() {
             var isClose = header.clientHeight === headerHeight;
             if (isClose) {
@@ -268,7 +268,7 @@
             }
         }
 
-        // tự đóng menu khi chọn list
+
 
         var menuItems = document.querySelectorAll('.Nav li a[href*="#"');
 
